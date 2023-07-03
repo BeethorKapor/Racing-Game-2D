@@ -20,8 +20,8 @@ namespace Car_Racing_Game_MOO_ICT
         private void btnNext_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormMain frmM = new FormMain();
-            frmM.Show();
+            FormLoad frmL = new FormLoad();
+            frmL.Show();
         }
 
         private void btnQuit_Click(object sender, EventArgs e)

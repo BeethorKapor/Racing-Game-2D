@@ -33,3 +33,4 @@ D:\vscode2022\Car_racing_game\CarRacingGame\Car Racing Game MOO ICT\obj\Debug\Ca
 D:\vscode2022\Car_racing_game\CarRacingGame\Car Racing Game MOO ICT\obj\Debug\Car_Racing_Game_MOO_ICT.FormIntroduction.resources
 D:\vscode2022\Car_racing_game\CarRacingGame\Car Racing Game MOO ICT\obj\Debug\Car_Racing_Game_MOO_ICT.FormHelp.resources
 D:\vscode2022\Car_racing_game\CarRacingGame\Car Racing Game MOO ICT\obj\Debug\Car_Racing_Game_MOO_ICT.FormSetting.resources
+D:\vscode2022\Car_racing_game\CarRacingGame\Car Racing Game MOO ICT\obj\Debug\Car_Racing_Game_MOO_ICT.FormLoad.resources

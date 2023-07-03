@@ -238,8 +238,7 @@ namespace Car_Racing_Game_MOO_ICT
 
         private void stopGame(object sender, EventArgs e)
         {
-            //gameTimer.Stop();
-            //btnStart.Enabled = true;
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -255,12 +254,19 @@ namespace Car_Racing_Game_MOO_ICT
             {
                 btnPause.Text = "Pause";
                 gameTimer.Start();
+                btnMenu.Enabled = false;
+                System.Media.SoundPlayer playCrash = new System.Media.SoundPlayer("haha.wav");
+                playCrash.PlayLooping();
             }
             else
             {
                 btnPause.Text = "Resume";
                 gameTimer.Stop();
+                btnMenu.Enabled = true;
+                System.Media.SoundPlayer playCrash = new System.Media.SoundPlayer("haha.wav");
+                playCrash.Stop();
             }
+            
         }
 
         private void btnMenu_Click(object sender, EventArgs e)
@@ -268,6 +274,14 @@ namespace Car_Racing_Game_MOO_ICT
             this.Close();
             FormMain frmM = new FormMain();
             frmM.Show();
+        }
+
+        private void Form1_SizeChanged(object sender, EventArgs e)
+        {
+            this.panel1.Left = ((this.Width - this.panel1.Width) - 15) / 2;
+            this.btnMenu.Left = ((this.Width - this.btnMenu.Width) / 2) - 190;
+            this.btnStart.Left = ((this.Width - this.btnStart.Width) - 15) / 2;
+            this.btnPause.Left = ((this.Width - this.btnPause.Width) / 2) + 160;
         }
 
         private void playSound()
