@@ -60,12 +60,10 @@ namespace Car_Racing_Game_MOO_ICT
 
         private void gameTimerEvent(object sender, EventArgs e)
         {
-
-            
+            //ການນັບຄະແນນ
             if (AI1.Top > 520)
             {
                 score += 1;
-
             }
             if (AI2.Top > 520)
             {
@@ -73,7 +71,7 @@ namespace Car_Racing_Game_MOO_ICT
             }
             txtScore.Text = "ຄະແນນ:" + score;
 
-
+            //ກຳນົດທິດການການເຄື່ອນທີ່
             if (goleft == true && player.Left > 10)
             {
                 player.Left -= playerSpeed;
@@ -82,7 +80,7 @@ namespace Car_Racing_Game_MOO_ICT
             {
                 player.Left += playerSpeed;
             }
-
+            //ກໍານົດທາງ
             roadTrack1.Top += roadSpeed;
             roadTrack2.Top += roadSpeed;
 
@@ -94,26 +92,26 @@ namespace Car_Racing_Game_MOO_ICT
             {
                 roadTrack1.Top = -519;
             }
-
+            //ກໍານົດລົດ
             AI1.Top += trafficSpeed;
             AI2.Top += trafficSpeed;
 
 
             if (AI1.Top > 530)
             {
-                changeAIcars(AI1);
+                changeAIcars(AI1); //ເອີ້ນໃຊ້ຟັງເຊີນ
             }
 
             if (AI2.Top > 530)
             {
-                changeAIcars(AI2);
+                changeAIcars(AI2);//ເອີ້ນໃຊ້ຟັງເຊີນ
             }
-
+            //ເກມຈົບ(Over Game)
             if (player.Bounds.IntersectsWith(AI1.Bounds) || player.Bounds.IntersectsWith(AI2.Bounds))
             {
-                gameOver();
+                gameOver();//ເອື້ນໃຊ້ຟັງເຊີນ
             }
-
+            //ກໍານົດຄວາມໄວຂອງທາງໂດຍທຽບກັບຄະແນນ
             if (score >= 20 && score < 50)
             {
                 //award.Image = Properties.Resources.silver;
@@ -127,13 +125,10 @@ namespace Car_Racing_Game_MOO_ICT
                 trafficSpeed = 27;
                 roadSpeed = 25;
             }
-
-
         }
-
+        //ຟັງເຊີນ ການປ່ຽນ ຫຼື random ລົດ
         private void changeAIcars(PictureBox tempCar)
         {
-
             carImage = rand.Next(1, 9);
 
             switch (carImage)
@@ -164,9 +159,7 @@ namespace Car_Racing_Game_MOO_ICT
                     break;
             }
 
-
             tempCar.Top = carPosition.Next(100, 400) * -1;
-
 
             if ((string)tempCar.Tag == "carLeft")
             {
@@ -177,7 +170,7 @@ namespace Car_Racing_Game_MOO_ICT
                 tempCar.Left = carPosition.Next(245, 422);
             }
         }
-
+        //ຟັງເຊີນເກມ Over Game
         private void gameOver()
         {
             System.Media.SoundPlayer playCrash = new System.Media.SoundPlayer("haha.wav");
@@ -196,14 +189,14 @@ namespace Car_Racing_Game_MOO_ICT
             award.BringToFront();
 
             btnStart.Enabled = true;
-
+            //ກໍານົດຄະແນນສູງສຸດ
             if (highScore < score)
             {
                 highScore = score;
                 txtHighScore.Text = "ຄະແນນສູງສຸດ:" + highScore;
             }
         }
-
+        //ຟັງເຊີນເລີ່ມເກມ
         private void ResetGame()
         {
             System.Media.SoundPlayer playCrash = new System.Media.SoundPlayer("haha.wav");
@@ -230,10 +223,10 @@ namespace Car_Racing_Game_MOO_ICT
 
             gameTimer.Start();
         }
-
+        //ປຸ່ມ Play
         private void restartGame(object sender, EventArgs e)
         {
-            ResetGame();
+            ResetGame();//ເອີ້ນໃຊ້ຟັງຊັນ ResetGame()
         }
 
         private void stopGame(object sender, EventArgs e)
@@ -245,7 +238,7 @@ namespace Car_Racing_Game_MOO_ICT
         {
 
         }
-
+        //ປຸ່ມຢຸດ ແລະ ປຸ່ມສຶບຕໍ່ເກມ
         private void btnPause_Click(object sender, EventArgs e)
         {
             paused = !paused;
@@ -268,14 +261,14 @@ namespace Car_Racing_Game_MOO_ICT
             }
             
         }
-
+        //ປຸ່ມກັບຄືນ
         private void btnMenu_Click(object sender, EventArgs e)
         {
             this.Close();
             FormMain frmM = new FormMain();
             frmM.Show();
         }
-
+        //ກໍານົດForm ເມື່ອມີການປັບຂະໜາດ
         private void Form1_SizeChanged(object sender, EventArgs e)
         {
             this.panel1.Left = ((this.Width - this.panel1.Width) - 15) / 2;
@@ -283,7 +276,7 @@ namespace Car_Racing_Game_MOO_ICT
             this.btnStart.Left = ((this.Width - this.btnStart.Width) - 15) / 2;
             this.btnPause.Left = ((this.Width - this.btnPause.Width) / 2) + 160;
         }
-
+        //ຟັງເຊີນຫູີ້ນສຽງເມືອລົດຕໍາກັນ(Game Over)
         private void playSound()
         {
             System.Media.SoundPlayer playCrash = new System.Media.SoundPlayer(Properties.Resources.hit);
