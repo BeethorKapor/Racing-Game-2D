@@ -19,6 +19,8 @@ namespace Car_Racing_Game_MOO_ICT
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
+            System.Media.SoundPlayer playCrash = new System.Media.SoundPlayer(Properties.Resources.playground);
+            playCrash.Stop();
             this.Hide();
             Form1 frm = new Form1();
             frm.Show();
@@ -26,6 +28,8 @@ namespace Car_Racing_Game_MOO_ICT
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
+            System.Media.SoundPlayer playCrash = new System.Media.SoundPlayer(Properties.Resources.playground);
+            playCrash.Stop();
             this.Close();
         }
 

@@ -179,5 +179,11 @@
   <ItemGroup>
     <None Include="Resources\mixkit-ambulance-siren-uk-1640.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playground.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\haha.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

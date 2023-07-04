@@ -80,6 +80,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtLoad);
             this.Controls.Add(this.progressBarLoad);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormLoad";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLoad";

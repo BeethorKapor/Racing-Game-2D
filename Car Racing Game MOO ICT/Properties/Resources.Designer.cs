@@ -71,6 +71,15 @@ namespace Car_Racing_Game_MOO_ICT.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Ambulance_Sound {
+            get {
+                return ResourceManager.GetStream("Ambulance-Sound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap bronze {
@@ -182,18 +191,9 @@ namespace Car_Racing_Game_MOO_ICT.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream mixkit_ambulance_siren_uk_1640 {
+        internal static System.IO.UnmanagedMemoryStream playground {
             get {
-                return ResourceManager.GetStream("mixkit_ambulance_siren_uk_1640", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
-        /// </summary>
-        internal static System.IO.UnmanagedMemoryStream mixkit_europe_ambulance_siren_1644 {
-            get {
-                return ResourceManager.GetStream("mixkit_europe_ambulance_siren_1644", resourceCulture);
+                return ResourceManager.GetStream("playground", resourceCulture);
             }
         }
         

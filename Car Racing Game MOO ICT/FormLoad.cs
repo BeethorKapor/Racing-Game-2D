@@ -22,6 +22,8 @@ namespace Car_Racing_Game_MOO_ICT
         private void FormLoad_Load(object sender, EventArgs e)
         {
             timerLoad.Start();
+            System.Media.SoundPlayer playCrash = new System.Media.SoundPlayer(Properties.Resources.playground);
+            playCrash.Play();
         }
 
         private void timerLoad_Tick(object sender, EventArgs e)
@@ -33,6 +35,8 @@ namespace Car_Racing_Game_MOO_ICT
             {
                 progressBarLoad.Value = 0;
                 timerLoad.Stop();
+                //System.Media.SoundPlayer playCrash = new System.Media.SoundPlayer(Properties.Resources.playground);
+                //playCrash.Stop();
                 this.Hide();
                 FormMain frmM = new FormMain();
                 frmM.Show();

@@ -173,7 +173,7 @@ namespace Car_Racing_Game_MOO_ICT
         //ຟັງເຊີນເກມ Over Game
         private void gameOver()
         {
-            System.Media.SoundPlayer playCrash = new System.Media.SoundPlayer("haha.wav");
+            System.Media.SoundPlayer playCrash = new System.Media.SoundPlayer(Properties.Resources.Ambulance_Sound);
             playCrash.Stop();
             playSound();
             gameTimer.Stop();
@@ -199,7 +199,7 @@ namespace Car_Racing_Game_MOO_ICT
         //ຟັງເຊີນເລີ່ມເກມ
         private void ResetGame()
         {
-            System.Media.SoundPlayer playCrash = new System.Media.SoundPlayer("haha.wav");
+            System.Media.SoundPlayer playCrash = new System.Media.SoundPlayer(Properties.Resources.Ambulance_Sound);
             playCrash.PlayLooping();
 
             btnStart.Enabled = false;
@@ -248,7 +248,7 @@ namespace Car_Racing_Game_MOO_ICT
                 btnPause.Text = "Pause";
                 gameTimer.Start();
                 btnMenu.Enabled = false;
-                System.Media.SoundPlayer playCrash = new System.Media.SoundPlayer("haha.wav");
+                System.Media.SoundPlayer playCrash = new System.Media.SoundPlayer(Properties.Resources.Ambulance_Sound);
                 playCrash.PlayLooping();
             }
             else
@@ -256,7 +256,7 @@ namespace Car_Racing_Game_MOO_ICT
                 btnPause.Text = "Resume";
                 gameTimer.Stop();
                 btnMenu.Enabled = true;
-                System.Media.SoundPlayer playCrash = new System.Media.SoundPlayer("haha.wav");
+                System.Media.SoundPlayer playCrash = new System.Media.SoundPlayer(Properties.Resources.Ambulance_Sound);
                 playCrash.Stop();
             }
             
@@ -264,6 +264,8 @@ namespace Car_Racing_Game_MOO_ICT
         //ປຸ່ມກັບຄືນ
         private void btnMenu_Click(object sender, EventArgs e)
         {
+            System.Media.SoundPlayer playCrash = new System.Media.SoundPlayer(Properties.Resources.playground);
+            playCrash.Play();
             this.Close();
             FormMain frmM = new FormMain();
             frmM.Show();
