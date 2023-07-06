@@ -129,7 +129,7 @@ namespace Car_Racing_Game_MOO_ICT
         //ຟັງເຊີນ ການປ່ຽນ ຫຼື random ລົດ
         private void changeAIcars(PictureBox tempCar)
         {
-            carImage = rand.Next(1, 9);
+            carImage = rand.Next(1, 8);
 
             switch (carImage)
             {
